@@ -7,9 +7,9 @@ class Main {
         double[][] c = CArray(z, x);
 
 
-        Printall("Первый массив(Z): ", z);
-        Printall("Второй массив(x): ", x);
-        Printall("Третий массив(c): ", c);
+        Printall1("Первый массив(Z): ", z);
+        Printall2("Второй массив(x): ", x);
+        Printall3("Третий массив(c): ", c);
 
     }
 
@@ -47,24 +47,24 @@ class Main {
         return c;
     }
 
-    public static void Printall(String Printall, short[] cn) {
-        System.out.print(Printall);
+    public static void Printall1(String Printall1, short[] cn) {
+        System.out.print(Printall1);
         for (short num : cn) {
             System.out.printf("%d ", num);
         }
         System.out.println();
     }
 
-    public static void Printall(String Printall, double[] cn) {
-        System.out.print(Printall);
+    public static void Printall2(String Printall2, double[] cn) {
+        System.out.print(Printall2);
         for (double num : cn) {
             System.out.printf("%f ", num);
         }
         System.out.println();
     }
 
-    public static void Printall(String Printall, double[][] cn) {
-        System.out.println(Printall);
+    public static void Printall3(String Printall3, double[][] cn) {
+        System.out.println(Printall3);
         for (double[] row : cn) {
             for (double num : row) {
                 System.out.printf("%10.2f ", num);
