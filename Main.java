@@ -67,7 +67,7 @@ class Main {
         System.out.println(Printall3);
         for (double[] row : cn) {
             for (double num : row) {
-                System.out.printf("%10.2f ", num);
+                System.out.printf("%10.2f", num);
             }
             System.out.println();
         }
