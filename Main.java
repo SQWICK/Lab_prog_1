@@ -35,12 +35,16 @@ class Main {
         double[][] c = new double[10][17];
         for (int i = 0; i < z.length; i++) {
             for (int j = 0; j < x.length; j++) {
-                if (z[i] == 15) {
-                    c[i][j] = Math.pow(3 / 4 / (1 / 2 - Math.cbrt(Math.cos(x[j]))), Math.log(Math.pow(Math.E, x[j])));
-                } else if (z[i] == 9 || z[i] == 11 || z[i] == 17 || z[i] == 19 || z[i] == 21) {
-                    c[i][j] = Math.pow(Math.log(Math.pow(Math.tan(x[j]), 2)), 0.5 * (4 - Math.atan(Math.pow((x[j] - 1) / 6, 2))));
-                } else {
-                    c[i][j] = Math.cos(Math.tan(Math.atan(1 / 4 * (x[j] - 1) / 6)));
+                switch (z[i]) {
+                    case 15:
+                        c[i][j] = Math.pow(3 / 4 / (1 / 2 - Math.cbrt(Math.cos(x[j]))), Math.log(Math.pow(Math.E, x[j])));
+                        break;
+                    case 9, 11, 17, 19, 21:
+                        c[i][j] = Math.pow(Math.log(Math.pow(Math.tan(x[j]), 2)), 0.5 * (4 - Math.atan(Math.pow((x[j] - 1) / 6, 2))));
+                        break;
+                    default:
+                        c[i][j] = Math.cos(Math.tan(Math.atan(1 / 4 * (x[j] - 1) / 6)));
+                        break;
                 }
             }
         }
